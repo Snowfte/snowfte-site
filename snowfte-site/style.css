@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #000;
+    color: #fff;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.video-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    perspective: 1000px;
+}
+
+.logo-3d {
+    width: 150px;
+    transform-style: preserve-3d;
+    transition: transform 0.2s ease-out;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.hero p {
+    opacity: 0.8;
+}
+
+/* FIX BUTTON POUR TOUJOURS APPARAITRE */
+.btn-scroll {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    margin-top: 15px;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #38bdf8;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-scroll:hover {
+    background: #0ea5e9;
+}
+
+/* NAV */
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px 0;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    color: #fff;
+}
+
+/* SECTIONS */
+.section {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+/* LINKS */
+.links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.links a {
+    padding: 16px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.05);
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.links a:hover {
+    background: rgba(56,189,248,0.3);
+    transform: translateY(-4px);
+}
+
+/* COLLABORATEURS */
+.collab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: 35px;
+}
+
+.collab-card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    padding: 25px;
+    backdrop-filter: blur(12px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collab-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(56,189,248,0.3);
+}
+
+.collab-card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    height: 280px;
+    object-fit: cover;
+}
+
+.collab-card h3 {
+    margin-bottom: 5px;
+}
+
+.collab-card p {
+    opacity: 0.7;
+    margin-bottom: 10px;
+}
+
+.collab-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.collab-links a {
+    padding: 8px 14px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.collab-links a:hover {
+    background: rgba(56,189,248,0.4);
+    transform: translateY(-2px);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    opacity: 0.5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .hero p { font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+    .logo-3d { width: 120px; }
+    .collab-card img { height: 200px; }
+}
+
+
+
+
+
+
+
+
